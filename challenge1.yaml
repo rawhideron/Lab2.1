@@ -1,0 +1,8 @@
+---
+- name: Chanllenge Me
+  hosts: groupA
+
+  tasks:
+     - name: ansible pip
+       pip:
+         name: ansible
