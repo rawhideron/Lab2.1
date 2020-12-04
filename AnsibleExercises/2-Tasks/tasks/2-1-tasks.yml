@@ -1,0 +1,14 @@
+---
+
+- hosts: aws
+  tasks:
+  - name: create file on AWS machines
+    file:
+      dest: /tmp/aws-file
+      state: '{{file_state}}'
+- hosts: homenet
+  tasks:
+  - name: create file on home machines
+    file:
+      dest: /tmp/home-file
+      state: '{{file_state}}'

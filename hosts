@@ -1,14 +1,28 @@
 [web]
-host1
-host2
-host3
+ec2-54-159-150-185.compute-1.amazonaws.com   ansible_user=ubuntu ansible_ssh_private_key_file=pkcs11:/home/rgoodman/.ssh/jenkins_worker.pem
+ec2-35-174-6-111.compute-1.amazonaws.com ansible_user=ubuntu ansible_ssh_private_key_file=pkcs11:/home/rgoodman/.ssh/jenkins_worker2.pem
 
+[db]
+db1 ansible_host=127.0.0.3 ansible_connection=local
+db2 ansible_host=127.0.0.4 ansible_connection=local
 
-[lb]
-lb1
-lb2
+[backup
+ckup_file=/tmp/backup_file
 
+[logicservers]
+server1        ansible_host=127.0.0.1 ansible_connection=local
+server2        ansible_host=127.0.0.2 ansible_connection=local
+server3        ansible_host=127.0.0.3 ansible_connection=local
+server4        ansible_host=127.0.0.4 ansible_connection=local
+
+[aws]
+ec2-54-159-150-185.compute-1.amazonaws.com   ansible_user=ubuntu ansible_ssh_private_key_file=pkcs11:/home/rgoodman/.ssh/jenkins_worker.pem
+ec2-35-174-6-111.compute-1.amazonaws.com ansible_user=ubuntu ansible_ssh_private_key_file=pkcs11:/home/rgoodman/.ssh/jenkins_worker2.pem
+
+[homenet]
+192.168.1.3  ansible_user=rgoodman
 
 [all:vars]
-ansible_connection=local
-
+all_file=/tmp/all_file
+[homenet:vars]
+web_fil=/tmp/homie_file

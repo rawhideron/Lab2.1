@@ -1,0 +1,15 @@
+[all]
+# web1 ansible_ssh_host=web1.kumulus.co
+# web2 ansible_ssh_host=web2.kumulus.co
+web1 ec2-54-159-150-185.compute-1.amazonaws.com   ansible_user=ubuntu ansible_ssh_private_key_file=pkcs11:/home/rgoodman/.ssh/jenkins_worker.pem
+web2 ec2-35-174-6-111.compute-1.amazonaws.com ansible_user=ubuntu ansible_ssh_private_key_file=pkcs11:/home/rgoodman/.ssh/jenkins_worker2.pem
+db1 ansible_ssh_host=db1.kumulus.co
+db2 ansible_ssh_host=db2.kumulus.co
+[web]
+web1
+web2
+[db]
+db1
+db2
+[backup]
+db2

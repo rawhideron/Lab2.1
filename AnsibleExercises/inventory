@@ -1,0 +1,3 @@
+[aws]
+web1 ec2-54-159-150-185.compute-1.amazonaws.com   ansible_user=ubuntu ansible_ssh_private_key_file=pkcs11:/home/rgoodman/.ssh/jenkins_worker.pem
+web2 ec2-35-174-6-111.compute-1.amazonaws.com ansible_user=ubuntu ansible_ssh_private_key_file=pkcs11:/home/rgoodman/.ssh/jenkins_worker2.pem
